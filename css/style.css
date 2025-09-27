@@ -10,13 +10,21 @@
 .headerContainer h1 {
     border: 1px black solid;
 }
-
+/*
 .headerContainer ul {
     border: 1px black solid;
 }
-
+*/
 root {
     font-size: 16px;
+}
+
+/*ーーーーーーーーーーーーーーーーーーーーーー
+ヘッダー
+--------------------------------------*/
+
+header {
+    position: relative;
 }
 
 .headerBox {
@@ -37,4 +45,26 @@ root {
 .fa-bars {
     font-size: 45px;
     color: #fff;
+}
+
+header ul {
+    list-style-type: none;
+    width: 200px;
+    position: absolute;
+    top: 50px;
+    right: 0%;
+
+}
+
+header li {
+    border-bottom: black solid 1px;
+    border-left: black solid 1px;
+    border-right: black solid 1px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+header li:first-child {
+    border-top: black solid 1px;
 }
