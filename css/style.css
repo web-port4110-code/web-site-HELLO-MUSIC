@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.headerContainer {
+    border: 1px black solid;
+}
+
+.headerContainer h1 {
+    border: 1px black solid;
+}
+
+.headerContainer ul {
+    border: 1px black solid;
+}
+
+root {
+    font-size: 16px;
+}
+
+.headerBox {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerBox__button {
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-bars {
+    font-size: 45px;
+    color: #fff;
+}
