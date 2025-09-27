@@ -34,15 +34,23 @@ header {
 }
 
 .headerBox__button {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.headerBox__button--open,
+.headerBox__button--close {
     width: 50px;
     height: 50px;
     background-color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
 }
 
-.fa-bars {
+.fa-bars, .fa-xmark {
     font-size: 45px;
     color: #fff;
 }
