@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .headerContainer {
@@ -17,6 +18,10 @@
 */
 html {
     font-size: 14px;
+}
+
+:root {
+    --concertTabHeight: 300px;
 }
 
 /*ーーーーーーーーーーーーーーーーーーーーーー
@@ -102,11 +107,12 @@ header li:first-child {
 /*------------------------------------------------
 メインコンテナ
 ------------------------------------------------*/
+
 /*------------------------------------------
 introductionモジュール
 --------------------------------------------*/
 .introduction {
-    background-color: aliceblue;
+    background-color: hsl(65, 75%, 78%);
     padding: 35px 25px;
 }
 
@@ -128,5 +134,90 @@ introductionモジュール
     border-bottom-right-radius: 20px;
     
 }
+
+/*--------------------------------------
+concertInfoモジュール
+---------------------------------------*/
+.box {
+    width: 200px;
+    height: 200px;
+    visibility: hidden;
+}
+
+.concertInfo {
+    border: 16px double hsl(65, 90%, 68%);
+    margin: 20px;
+    padding-top: 15px;
+    height: 400px;
+}
+
+.concertInfo__tabSelect {
+    text-align: center;
+}
+
+.concertInfo__tab {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.concertInfo__tab hgroup {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.concertInfo__tab h2 {
+    font-size: 16px;
+}
+
+.concertInfo__tab li {
+    white-space: nowrap;
+}
+
+.concertInfo__tab--one {
+    width: 90%;
+    height: var(--concertTabHeight);
+    visibility: hidden;
+    background-color: hsl(119, 59%, 87%);
+    position: absolute;
+    padding: 10px 20px;
+    overflow: scroll;
+}
+
+.concertInfo__tab--two {
+    width: 90%;
+    height: var(--concertTabHeight);
+    visibility: hidden;
+    background-color: hsl(149, 59%, 87%);
+    position: absolute;
+    padding: 10px 20px;
+    overflow: scroll;
+}
+
+.concertInfo__tab--three {
+    width: 90%;
+    height: var(--concertTabHeight);
+    visibility: hidden;
+    background-color: hsl(179, 59%, 87%);
+    position: absolute;
+    padding: 10px 20px;
+    overflow: scroll;
+}
+
+.concertInfo__tab--four {
+    width: 90%;
+    height: var(--concertTabHeight);
+    visibility: hidden;
+    background-color: hsl(209, 59%, 87%);
+    position: absolute;
+    padding: 10px 20px;
+    overflow: scroll;
+}
+
+.active {
+    visibility: visible;
+}
+
 
 
