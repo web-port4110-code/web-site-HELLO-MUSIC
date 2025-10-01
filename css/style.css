@@ -15,8 +15,8 @@
     border: 1px black solid;
 }
 */
-root {
-    font-size: 16px;
+html {
+    font-size: 14px;
 }
 
 /*ーーーーーーーーーーーーーーーーーーーーーー
@@ -98,3 +98,35 @@ header li {
 header li:first-child {
     border-top: black solid 1px;
 }
+
+/*------------------------------------------------
+メインコンテナ
+------------------------------------------------*/
+/*------------------------------------------
+introductionモジュール
+--------------------------------------------*/
+.introduction {
+    background-color: aliceblue;
+    padding: 35px 25px;
+}
+
+.introduction h1, .introduction__para {
+    background-color: #fff;
+}
+
+.introduction h1 {
+    font-size: 18px;
+    padding-top: 3px;
+    padding-left: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.introduction__para {
+    padding: 7px 40px 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+
