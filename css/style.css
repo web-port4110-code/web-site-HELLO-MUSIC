@@ -219,5 +219,38 @@ concertInfoモジュール
     visibility: visible;
 }
 
+/*----------------------------------------
+スライドショーモジュール
+-----------------------------------------*/
+
+.slideShow h1 {
+    font-size: 18px;
+}
+
+.slide_box {
+  margin: 30px auto;
+  padding: 0;
+  width: 80%;
+  background-color: hsl(57, 87%, 65%);
+}
+
+.slide_box li {
+    text-align: center;
+}
+
+.slide-image img {
+    width: 100%;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: hsl(48, 97%, 49%)!important;
+}
+.slick-prev {
+  left: -25px;
+}
+.slick-next {
+  right: -25px;
+}
+
 
 
