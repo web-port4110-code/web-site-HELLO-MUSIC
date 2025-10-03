@@ -21,4 +21,12 @@ $(function() {
         options[selectValue - 1].classList.add('active');
 
     });
+
+    //スライドショーの設定
+    $('.slide_box').slick({
+	    arrows: true,
+        autoplay:true,
+        autoplaySpeed:3000,
+        dots:true
+    });
 })
