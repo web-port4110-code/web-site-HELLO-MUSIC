@@ -64,92 +64,103 @@
                     </div>
                 </div>
                 <section class="concertInfo">
-                    <div class="concertInfo__tabSelect">
-                        <label for="tabNumber">コンサート：</label>
-                        <select id="tabNumber">
-                            <option label="第1回" value="1" class="" ></option>
-                            <option label="第2回" value="2" class="" ></option>
-                            <option label="第3回" value="3" class="" ></option>
-                            <option label="第4回" value="4" class="" ></option>
-                        </select>
+                    <div class="concertInfo__heading">
+                        <i class="fa-solid fa-music"></i>
+                        <h2>コンサート情報</h2>
+                        <i class="fa-solid fa-music"></i>
                     </div>
-                    <div class="concertInfo__tab">
-                        <div class="concertInfo__tab--one active">
-                            <hgroup>
-                                <h2>第1回 「ヴァイオリンの調べ」</h2>
-                                <p>8/22 18:30〜</p>
-                            </hgroup>
-                            <ul>
-                                <li>J.S.バッハ<br>　無伴奏ヴァイオリンのためのパルティータ 第6番</li>
-                                <li>B.バルトーク<br>　無伴奏ヴァイオリンのためのソナタ</li>
-                                <li>L.V.ベートーヴェン<br>　ヴァイオリンソナタ 第6番</li>
-                            </ul>
+                    <div class="concertInfo__box">
+                        <div class="concertInfo__tabSelect">
+                            <label for="tabNumber">コンサート：</label>
+                            <select id="tabNumber">
+                                <option label="第1回" value="1" class="" ></option>
+                                <option label="第2回" value="2" class="" ></option>
+                                <option label="第3回" value="3" class="" ></option>
+                                <option label="第4回" value="4" class="" ></option>
+                            </select>
                         </div>
-                        <div class="concertInfo__tab--two">
-                            <hgroup>
-                                <h2>第2回 「学生コンサート」</h2>
-                                <p>8/23 10:30〜</p>
-                            </hgroup>
-                            <ul>
-                                <li>ショパン<br>　幻想曲第1番</li>
-                                <li>ショパン<br>　華麗なる大円舞曲</li>
-                                <li>サン＝サーンス<br>　クラリネット・ソナタ 変ホ長調より 第1楽章</li>
-                                <li>ベートーヴェン<br>　ホルン・ソナタ ヘ長調</li>
-                                <li>ブラームス<br>　ヴァイオリン・ソナタ 第1番 ト長調より 第1楽章</li>
-                            </ul>
-                        </div>
-                        <div class="concertInfo__tab--three">
-                            <hgroup>
-                                <h2>第3回 「モーツァルトの魅力」</h2>
-                                <p>8/23 14:30〜</p>
-                            </hgroup>
-                            <ul>
-                                <li>ピアノ・ソナタ 第11番 イ長調 「トルコ行進曲付き」</li>
-                                <li>クラリネット五重奏曲</li>
-                                <li>きらきら星変奏曲</li>
-                                <li>弦楽四重奏曲 第19番 ハ長調 「不協和音」</li>
-                            </ul>
-                        </div>
-                        <div class="concertInfo__tab--four">
-                            <hgroup>
-                                <h2>第4回 「作曲コンクール 本戦」</h2>
-                                <p>8/23 18:30〜</p>
-                            </hgroup>
-                            <ul>
-                                <li>キム・ヨネ<br>　晴天(世界初演)</li>
-                                <li>ボラリス・アデトワフスキー<br>　ここにあるものはなんだろう(世界初演)</li>
-                                <li>郡司総一郎<br>　交響的作品(世界初演)</li>
-                            </ul>
+                        <div class="concertInfo__tab">
+                            <div class="concertInfo__tab--one active">
+                                <hgroup>
+                                    <h2>第1回 「ヴァイオリンの調べ」</h2>
+                                    <p>8/22 18:30〜</p>
+                                </hgroup>
+                                <ul>
+                                    <li>J.S.バッハ<br>　無伴奏ヴァイオリンのためのパルティータ 第6番</li>
+                                    <li>B.バルトーク<br>　無伴奏ヴァイオリンのためのソナタ</li>
+                                    <li>L.V.ベートーヴェン<br>　ヴァイオリンソナタ 第6番</li>
+                                </ul>
+                            </div>
+                            <div class="concertInfo__tab--two">
+                                <hgroup>
+                                    <h2>第2回 「学生コンサート」</h2>
+                                    <p>8/23 10:30〜</p>
+                                </hgroup>
+                                <ul>
+                                    <li>ショパン<br>　幻想曲第1番</li>
+                                    <li>ショパン<br>　華麗なる大円舞曲</li>
+                                    <li>サン＝サーンス<br>　クラリネット・ソナタ 変ホ長調より 第1楽章</li>
+                                    <li>ベートーヴェン<br>　ホルン・ソナタ ヘ長調</li>
+                                    <li>ブラームス<br>　ヴァイオリン・ソナタ 第1番 ト長調より 第1楽章</li>
+                                </ul>
+                            </div>
+                            <div class="concertInfo__tab--three">
+                                <hgroup>
+                                    <h2>第3回 「モーツァルトの魅力」</h2>
+                                    <p>8/23 14:30〜</p>
+                                </hgroup>
+                                <ul>
+                                    <li>ピアノ・ソナタ 第11番 イ長調 「トルコ行進曲付き」</li>
+                                    <li>クラリネット五重奏曲</li>
+                                    <li>きらきら星変奏曲</li>
+                                    <li>弦楽四重奏曲 第19番 ハ長調 「不協和音」</li>
+                                </ul>
+                            </div>
+                            <div class="concertInfo__tab--four">
+                                <hgroup>
+                                    <h2>第4回 「作曲コンクール 本戦」</h2>
+                                    <p>8/23 18:30〜</p>
+                                </hgroup>
+                                <ul>
+                                    <li>キム・ヨネ<br>　晴天(世界初演)</li>
+                                    <li>ボラリス・アデトワフスキー<br>　ここにあるものはなんだろう(世界初演)</li>
+                                    <li>郡司総一郎<br>　交響的作品(世界初演)</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="news">
-                    <h2>news</h2>
+                    <h2>news!</h2>
                     <div class="news__table">
-                    <table>
-                    <?php
-                    try{
-                        require_once './php_mojure/connect_db.php';
-                        $db = getdb();
-                        $stt = $db->prepare('SELECT * FROM samplenews');
-                        $stt->execute();
-                        while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
-                    ?>
-                        <tr>
-                            <td class="news__table--day"><span><?=$row['day'] ?></span></td>
-                            <td class="news__table--content"><?=$row['content'] ?></td>
-                        </tr>
-                    <?php
-                        }
-                    } catch (\Throwable $th) {
-                        die("接続エラー：{$th->getMessage()}");
-                    }
-                    ?>
-                    </table>
+                        <table>
+                            <?php
+                            try{
+                                require_once './php_mojure/connect_db.php';
+                                $db = getdb();
+                                $stt = $db->prepare('SELECT * FROM samplenews');
+                                $stt->execute();
+                                while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
+                            ?>
+                                <tr>
+                                    <td class="news__table--day"><span><?=$row['day'] ?></span></td>
+                                    <td class="news__table--content"><?=$row['content'] ?></td>
+                                </tr>
+                            <?php
+                                }
+                            } catch (\Throwable $th) {
+                                die("接続エラー：{$th->getMessage()}");
+                            }
+                            ?>
+                        </table>
                     </div>
                 </section>
                 <section class="slideShow">
-                    <h1>演奏会の曲目を聴いてみよう！</h1>
+                    <h1>
+                        <i class="fa-solid fa-star"></i>
+                        演奏会の曲目を聴いてみよう！
+                        <i class="fa-solid fa-star"></i>
+                    </h1>
 	                <ul class="slide_box">
 	                	<li>
                             <a href="#">
@@ -183,6 +194,25 @@
 
         <footer>
             <div class="footerContainer">
+                <section class="footerIcon">
+                    <h2>Follow Us!</h2>
+                    <div class="footerIcon__box">
+                        <div class="footerIcon__box--x">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </div>
+                        <div class="footerIcon__box--insta">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+                </section>
+                <section class="footerNav">
+                    <ul>
+                        <li>HOME</li>
+                        <li>アクセス</li>
+                        <li>お問い合わせ</li>
+                        <li>楽器紹介</li>
+                    </ul>
+                </section>
             </div>
         </footer>
     </body>
