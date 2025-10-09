@@ -145,9 +145,20 @@ concertInfoモジュール
 }
 
 .concertInfo {
+    height: 550px;
+}
+
+.concertInfo__heading i {
+    font-size: 22px;
+}
+
+.concertInfo i,
+.concertInfo h2 {
+    display: inline;
+}
+
+.concertInfo__box {
     border: 16px double hsl(65, 90%, 68%);
-    margin: 20px;
-    padding-top: 15px;
     height: 400px;
 }
 
@@ -228,6 +239,10 @@ concertInfoモジュール
     font-size: 18px;
 }
 
+.fa-star {
+    color: hsl(48, 97%, 49%);
+}
+
 .slide_box {
   margin: 30px auto;
   padding: 0;
@@ -283,6 +298,74 @@ concertInfoモジュール
 .news__table--day span {
     border-bottom: 1px solid black;
     padding-bottom: 3px;
+}
+
+/*---------------------------------------
+フッターモジュール
+------------------------------------*/
+
+.footerContainer {
+    background-color: hsl(0, 0%, 16%);
+    padding: 15px 0 20px;
+}
+
+.footerIcon {
+    text-align: center;
+    
+}
+
+.footerIcon h2 {
+    color: #fff;
+    font-size: 16px;
+}
+
+.footerIcon__box {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footerIcon__box--x,
+.footerIcon__box--insta {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0 15px;
+}
+
+.footerIcon__box i {
+    font-size: 20px;;
+}
+
+.fa-x-twitter {
+    background-color: gray;
+    color: #fff;
+}
+
+.fa-instagram {
+    background-color: orange;
+    border: 1px solid orange;
+    color: #fff;
+}
+
+.footerNav {
+    text-align: center;
+    color: #fff;
+    margin-top: 15px;
+
+}
+
+.footerNav li {
+    margin-bottom: 7px;
+}
+
+.footerNav li:last-child {
+    margin-bottom: 7px;
 }
 
 
