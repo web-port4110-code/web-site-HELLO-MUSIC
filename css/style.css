@@ -7,7 +7,7 @@
 .headerContainer {
     border: 1px black solid;
 }
-
+/*
 .headerContainer h1 {
     border: 1px black solid;
 }
@@ -22,20 +22,59 @@ html {
 
 :root {
     --concertTabHeight: 300px;
+    --cardOneColor: hsl(119, 59%, 87%);
+    --cardTwoColor: hsl(149, 59%, 87%);
+    --cardThreeColor: hsl(179, 59%, 87%);
+    --cardFourColor: hsl(209, 59%, 87%);
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
 }
 
 /*ーーーーーーーーーーーーーーーーーーーーーー
 ヘッダー
 --------------------------------------*/
 
+.attention {
+    background-color: hsl(60, 2%, 84%);
+    border: 1px solid hsl(60, 1%, 26%);
+    height: 45px;
+    
+}
+
+.attention p {
+    margin: 0;
+    padding: 0;
+}
+
+.dancing-script-font {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+header h1 {
+    font-size: 35px;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
 header {
-    position: relative;
+    position: fixed;
+    z-index: 10;
 }
 
 .headerBox {
-    height: 50px;
+    height: 54px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border: solid 2px hsl(261, 100%, 50%);
+    background-color: hsl(260, 82%, 91%);
 }
 
 .headerBox__button {
@@ -60,6 +99,11 @@ header {
     text-decoration-line: none;
 }
 
+.headerBox__button--open a:hover,
+.headerBox__button--close a:hover {
+    opacity: 0.6;
+}
+
 .headerBox__iconBox {
     width: 50px;
     height: 50px;
@@ -78,7 +122,7 @@ header ul {
     list-style-type: none;
     width: 200px;
     position: absolute;
-    top: 50px;
+    top: 102px;
     right: -120%;
 
 }
@@ -108,6 +152,15 @@ header li:first-child {
 メインコンテナ
 ------------------------------------------------*/
 
+
+.heroImg {
+    padding-top: 101px;
+}
+
+.heroImg img {
+    border: 1px solid hsl(60, 0%, 56%);
+}
+
 /*------------------------------------------
 introductionモジュール
 --------------------------------------------*/
@@ -122,10 +175,14 @@ introductionモジュール
 
 .introduction h1 {
     font-size: 18px;
-    padding-top: 3px;
-    padding-left: 5px;
+    margin-bottom: 0;
+    padding: 15px 0 10px 7px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+.introduction dfn {
+    border-bottom: solid 3px hsl(53, 92%, 53%);;
 }
 
 .introduction__para {
@@ -138,6 +195,7 @@ introductionモジュール
 /*--------------------------------------
 concertInfoモジュール
 ---------------------------------------*/
+
 .box {
     width: 200px;
     height: 200px;
@@ -145,7 +203,8 @@ concertInfoモジュール
 }
 
 .concertInfo {
-    height: 550px;
+    height: 630px;
+    padding: 20px;
 }
 
 .concertInfo__heading i {
@@ -159,11 +218,22 @@ concertInfoモジュール
 
 .concertInfo__box {
     border: 16px double hsl(65, 90%, 68%);
-    height: 400px;
+    height: 550px;
+    margin-top: 15px;
+}
+
+.concertInfo__tabSelect select {
+    width: 85%;
+}
+
+.concertInfo__tabSelect--label,
+.concertInfo__tabSelect--select {
+    display: flex;
+    justify-content: center;
 }
 
 .concertInfo__tabSelect {
-    text-align: center;
+    margin-top: 15px;
 }
 
 .concertInfo__tab {
@@ -226,8 +296,75 @@ concertInfoモジュール
     overflow: scroll;
 }
 
+
+
+.list-group {
+    overflow: scroll;
+    
+}
+
+.list-group-item {
+    white-space: nowrap;
+}
+
+.card {
+    position: absolute;
+    visibility: hidden;
+    width: 90%;
+    height: 410px;
+}
+
+.concertInfo__tab h3 {
+    font-size: 14px;
+}
+
+.card-header {
+    text-align: center;
+    padding: 20px 0 20px;
+}
+
+.card-subtitle {
+    margin-top: 5px;
+}
+
+.card-text {
+    text-align: center;
+}
+
 .active {
     visibility: visible;
+}
+
+.cardOne .card-header {
+    background-color: var(--cardOneColor);
+}
+
+.cardOne .list-group-item {
+    border-bottom: 1px solid var(--cardOneColor);
+}
+
+.cardTwo .card-header {
+    background-color: var(--cardTwoColor);
+}
+
+.cardTwo .list-group-item {
+    border-bottom: 1px solid var(--cardTwoColor);
+}
+
+.cardThree .card-header {
+    background-color: var(--cardThreeColor);
+}
+
+.cardThree .list-group-item {
+    border-bottom: 1px solid var(--cardThreeColor);
+}
+
+.cardFour .card-header {
+    background-color: var(--cardFourColor);
+}
+
+.cardFour .list-group-item {
+    border-bottom: 1px solid var(--cardFourColor);
 }
 
 
@@ -354,14 +491,23 @@ concertInfoモジュール
 }
 
 .footerNav {
-    text-align: center;
+    /*display: flex;
+    justify-content: center;*/
     color: #fff;
     margin-top: 15px;
 
 }
 
+.footerNav p {
+    text-align: center;
+}
+
 .footerNav li {
+    display: flex;
+    justify-content: center;
     margin-bottom: 7px;
+    list-style-type: none;
+    list-style-position: inside;
 }
 
 .footerNav li:last-child {
