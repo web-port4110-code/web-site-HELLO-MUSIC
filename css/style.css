@@ -426,22 +426,25 @@ concertInfoモジュール
 
 .news__table {
     background-color: #fff;
-    height: 100px;
+    height: 140px;
     width: 100%;
     overflow: scroll;
     margin: 10px 0 0;
+    
 }
 
 .news__table td {
     white-space: nowrap;
     padding-left: 15px;
+    font-size: 17px;
 }
 
+/*
 .news__table--day span {
     border-bottom: 1px solid black;
     padding-bottom: 3px;
 }
-
+*/
 /*---------------------------------------
 フッターモジュール
 ------------------------------------*/

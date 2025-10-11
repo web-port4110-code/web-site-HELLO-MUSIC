@@ -221,7 +221,7 @@
                                 while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
                             ?>
                                 <tr>
-                                    <td class="news__table--day"><span><?=$row['day'] ?></span></td>
+                                    <td class="news__table--day"><?=$row['day'] ?></td>
                                     <td class="news__table--content"><?=$row['content'] ?></td>
                                 </tr>
                             <?php
