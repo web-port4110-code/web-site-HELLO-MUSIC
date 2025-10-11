@@ -33,6 +33,10 @@ img {
     vertical-align: bottom;
 }
 
+a {
+    text-decoration-line: none;
+}
+
 /*ーーーーーーーーーーーーーーーーーーーーーー
 ヘッダー
 --------------------------------------*/
@@ -526,6 +530,9 @@ concertInfoモジュール
     margin-bottom: 7px;
 }
 
+.footerNav a {
+    color: #fff;
+}
 
 
 
