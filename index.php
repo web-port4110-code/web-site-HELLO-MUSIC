@@ -209,7 +209,7 @@
                     </div>
                 </section>
                 <section class="news">
-                    <h2>news!</h2>
+                    <h2>news<span>!</span></h2>
                     <div class="news__table">
                         <table>
                             <?php

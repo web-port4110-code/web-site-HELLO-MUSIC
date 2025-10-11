@@ -417,6 +417,11 @@ concertInfoモジュール
 
 .news h2 {
     color: gray;
+    letter-spacing: px;
+}
+
+.news h2 span {
+    margin-left: 2px;
 }
 
 .news__table {
