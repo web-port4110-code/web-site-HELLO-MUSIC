@@ -1,21 +1,9 @@
-* {
+html * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.headerContainer {
-    border: 1px black solid;
-}
-/*
-.headerContainer h1 {
-    border: 1px black solid;
-}
-/*
-.headerContainer ul {
-    border: 1px black solid;
-}
-*/
 html {
     font-size: 14px;
 }
@@ -40,6 +28,8 @@ a {
 /*ーーーーーーーーーーーーーーーーーーーーーー
 ヘッダー
 --------------------------------------*/
+
+
 
 .attention {
     background-color: hsl(60, 2%, 84%);
@@ -70,6 +60,7 @@ header h1 {
 header {
     position: fixed;
     z-index: 10;
+    width: 100%;
 }
 
 .headerBox {
@@ -151,6 +142,7 @@ header li {
 header li:first-child {
     border-top: black solid 1px;
 }
+
 
 /*------------------------------------------------
 メインコンテナ
