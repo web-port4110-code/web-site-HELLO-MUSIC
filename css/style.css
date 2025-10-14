@@ -371,9 +371,13 @@ concertInfoモジュール
 /*----------------------------------------
 スライドショーモジュール
 -----------------------------------------*/
+.slideShow {
+    padding: 15px 0 10px;
+}
 
 .slideShow h1 {
     font-size: 18px;
+    margin-left: 8px;
 }
 
 .fa-star {
@@ -417,26 +421,34 @@ concertInfoモジュール
 
 .news h2 {
     color: gray;
+    letter-spacing: px;
+}
+
+.news h2 span {
+    margin-left: 2px;
 }
 
 .news__table {
     background-color: #fff;
-    height: 100px;
+    height: 140px;
     width: 100%;
     overflow: scroll;
     margin: 10px 0 0;
+    padding-top: 8px;
 }
 
 .news__table td {
     white-space: nowrap;
     padding-left: 15px;
+    font-size: 17px;
 }
 
+/*
 .news__table--day span {
     border-bottom: 1px solid black;
     padding-bottom: 3px;
 }
-
+*/
 /*---------------------------------------
 フッターモジュール
 ------------------------------------*/

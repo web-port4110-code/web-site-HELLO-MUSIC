@@ -6,7 +6,7 @@
         
         try {
             $db = new PDO($dbn, $user, $pass);
-            print '接続に成功しました';
+            /*print '接続に成功しました';*/
             return $db;
         } catch (\Throwable $th) {
             die("接続エラー：{$th->getMessage()}");
