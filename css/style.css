@@ -25,6 +25,8 @@ a {
     text-decoration-line: none;
 }
 
+@media (min-width: 768px) {}
+
 /*ーーーーーーーーーーーーーーーーーーーーーー
 ヘッダー
 --------------------------------------*/
@@ -143,6 +145,13 @@ header li:first-child {
     border-top: black solid 1px;
 }
 
+header li:nth-child(odd) {
+    background-color: hsl(65, 75%, 78%);
+}
+
+header li:nth-child(even) {
+    background-color: hsl(260, 82%, 91%);
+}
 
 /*------------------------------------------------
 メインコンテナ
@@ -150,7 +159,7 @@ header li:first-child {
 
 
 .heroImg {
-    padding-top: 101px;
+    padding-top: 99px;
 }
 
 .heroImg img {
