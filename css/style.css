@@ -1,0 +1,538 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headerContainer {
+    border: 1px black solid;
+}
+/*
+.headerContainer h1 {
+    border: 1px black solid;
+}
+/*
+.headerContainer ul {
+    border: 1px black solid;
+}
+*/
+html {
+    font-size: 14px;
+}
+
+:root {
+    --concertTabHeight: 300px;
+    --cardOneColor: hsl(119, 59%, 87%);
+    --cardTwoColor: hsl(149, 59%, 87%);
+    --cardThreeColor: hsl(179, 59%, 87%);
+    --cardFourColor: hsl(209, 59%, 87%);
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+/*ーーーーーーーーーーーーーーーーーーーーーー
+ヘッダー
+--------------------------------------*/
+
+.attention {
+    background-color: hsl(60, 2%, 84%);
+    border: 1px solid hsl(60, 1%, 26%);
+    height: 45px;
+    
+}
+
+.attention p {
+    margin: 0;
+    padding: 0;
+}
+
+.dancing-script-font {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+header h1 {
+    font-size: 35px;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+header {
+    position: fixed;
+    z-index: 10;
+}
+
+.headerBox {
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 2px hsl(261, 100%, 50%);
+    background-color: hsl(260, 82%, 91%);
+}
+
+.headerBox__button {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.headerBox__button--open,
+.headerBox__button--close {
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    position: absolute;
+}
+
+.headerBox__button--open a,
+.headerBox__button--close a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration-line: none;
+}
+
+.headerBox__button--open a:hover,
+.headerBox__button--close a:hover {
+    opacity: 0.6;
+}
+
+.headerBox__iconBox {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.fa-bars, .fa-xmark {
+    font-size: 45px;
+    color: #fff;
+}
+
+header ul {
+    list-style-type: none;
+    width: 200px;
+    position: absolute;
+    top: 102px;
+    right: -120%;
+
+}
+
+.open {
+    right: 0;
+}
+
+.hide {
+    display: none;
+}
+
+header li {
+    border-bottom: black solid 1px;
+    border-left: black solid 1px;
+    border-right: black solid 1px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+header li:first-child {
+    border-top: black solid 1px;
+}
+
+/*------------------------------------------------
+メインコンテナ
+------------------------------------------------*/
+
+
+.heroImg {
+    padding-top: 101px;
+}
+
+.heroImg img {
+    border: 1px solid hsl(60, 0%, 56%);
+}
+
+/*------------------------------------------
+introductionモジュール
+--------------------------------------------*/
+.introduction {
+    background-color: hsl(65, 75%, 78%);
+    padding: 35px 25px;
+}
+
+.introduction h1, .introduction__para {
+    background-color: #fff;
+}
+
+.introduction h1 {
+    font-size: 18px;
+    margin-bottom: 0;
+    padding: 15px 0 10px 7px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.introduction dfn {
+    border-bottom: solid 3px hsl(53, 92%, 53%);;
+}
+
+.introduction__para {
+    padding: 7px 40px 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+/*--------------------------------------
+concertInfoモジュール
+---------------------------------------*/
+
+.box {
+    width: 200px;
+    height: 200px;
+    visibility: hidden;
+}
+
+.concertInfo {
+    height: 630px;
+    padding: 20px;
+}
+
+.concertInfo__heading i {
+    font-size: 22px;
+}
+
+.concertInfo i,
+.concertInfo h2 {
+    display: inline;
+}
+
+.concertInfo__box {
+    border: 16px double hsl(65, 90%, 68%);
+    height: 550px;
+    margin-top: 15px;
+}
+
+.concertInfo__tabSelect select {
+    width: 85%;
+}
+
+.concertInfo__tabSelect--label,
+.concertInfo__tabSelect--select {
+    display: flex;
+    justify-content: center;
+}
+
+.concertInfo__tabSelect {
+    margin-top: 15px;
+}
+
+.concertInfo__tab {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.concertInfo__tab hgroup {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.concertInfo__tab h2 {
+    font-size: 16px;
+}
+
+.concertInfo__tab li {
+    white-space: nowrap;
+}
+
+.concertInfo__tab--one {
+    width: 90%;
+    height: var(--concertTabHeight);
+    visibility: hidden;
+    background-color: hsl(119, 59%, 87%);
+    position: absolute;
+    padding: 10px 20px;
+    overflow: scroll;
+}
+
+.concertInfo__tab--two {
+    width: 90%;
+    height: var(--concertTabHeight);
+    visibility: hidden;
+    background-color: hsl(149, 59%, 87%);
+    position: absolute;
+    padding: 10px 20px;
+    overflow: scroll;
+}
+
+.concertInfo__tab--three {
+    width: 90%;
+    height: var(--concertTabHeight);
+    visibility: hidden;
+    background-color: hsl(179, 59%, 87%);
+    position: absolute;
+    padding: 10px 20px;
+    overflow: scroll;
+}
+
+.concertInfo__tab--four {
+    width: 90%;
+    height: var(--concertTabHeight);
+    visibility: hidden;
+    background-color: hsl(209, 59%, 87%);
+    position: absolute;
+    padding: 10px 20px;
+    overflow: scroll;
+}
+
+
+
+.list-group {
+    overflow: scroll;
+    
+}
+
+.list-group-item {
+    white-space: nowrap;
+}
+
+.card {
+    position: absolute;
+    visibility: hidden;
+    width: 90%;
+    height: 410px;
+}
+
+.concertInfo__tab h3 {
+    font-size: 14px;
+}
+
+.card-header {
+    text-align: center;
+    padding: 20px 0 20px;
+}
+
+.card-subtitle {
+    margin-top: 5px;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.active {
+    visibility: visible;
+}
+
+.cardOne .card-header {
+    background-color: var(--cardOneColor);
+}
+
+.cardOne .list-group-item {
+    border-bottom: 1px solid var(--cardOneColor);
+}
+
+.cardTwo .card-header {
+    background-color: var(--cardTwoColor);
+}
+
+.cardTwo .list-group-item {
+    border-bottom: 1px solid var(--cardTwoColor);
+}
+
+.cardThree .card-header {
+    background-color: var(--cardThreeColor);
+}
+
+.cardThree .list-group-item {
+    border-bottom: 1px solid var(--cardThreeColor);
+}
+
+.cardFour .card-header {
+    background-color: var(--cardFourColor);
+}
+
+.cardFour .list-group-item {
+    border-bottom: 1px solid var(--cardFourColor);
+}
+
+
+/*----------------------------------------
+スライドショーモジュール
+-----------------------------------------*/
+.slideShow {
+    padding: 15px 0 10px;
+}
+
+.slideShow h1 {
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+.fa-star {
+    color: hsl(48, 97%, 49%);
+}
+
+.slide_box {
+  margin: 30px auto;
+  padding: 0;
+  width: 80%;
+  background-color: hsl(57, 87%, 65%);
+}
+
+.slide_box li {
+    text-align: center;
+}
+
+.slide-image img {
+    width: 100%;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: hsl(48, 97%, 49%)!important;
+}
+.slick-prev {
+  left: -25px;
+}
+.slick-next {
+  right: -25px;
+}
+
+
+/*----------------------------------
+ニュースモジュール
+----------------------------------*/
+
+.news {
+    background-color: hsl(65, 75%, 78%);
+    padding: 10px 20px 30px;
+}
+
+.news h2 {
+    color: gray;
+    letter-spacing: px;
+}
+
+.news h2 span {
+    margin-left: 2px;
+}
+
+.news__table {
+    background-color: #fff;
+    height: 140px;
+    width: 100%;
+    overflow: scroll;
+    margin: 10px 0 0;
+    padding-top: 8px;
+}
+
+.news__table td {
+    white-space: nowrap;
+    padding-left: 15px;
+    font-size: 17px;
+}
+
+/*
+.news__table--day span {
+    border-bottom: 1px solid black;
+    padding-bottom: 3px;
+}
+*/
+/*---------------------------------------
+フッターモジュール
+------------------------------------*/
+
+.footerContainer {
+    background-color: hsl(0, 0%, 16%);
+    padding: 15px 0 20px;
+}
+
+.footerIcon {
+    text-align: center;
+    
+}
+
+.footerIcon h2 {
+    color: #fff;
+    font-size: 16px;
+}
+
+.footerIcon__box {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footerIcon__box--x,
+.footerIcon__box--insta {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0 15px;
+}
+
+.footerIcon__box i {
+    font-size: 20px;;
+}
+
+.fa-x-twitter {
+    background-color: gray;
+    color: #fff;
+}
+
+.fa-instagram {
+    background-color: orange;
+    border: 1px solid orange;
+    color: #fff;
+}
+
+.footerNav {
+    /*display: flex;
+    justify-content: center;*/
+    color: #fff;
+    margin-top: 15px;
+
+}
+
+.footerNav p {
+    text-align: center;
+}
+
+.footerNav li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7px;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.footerNav li:last-child {
+    margin-bottom: 7px;
+}
+
+.footerNav a {
+    color: #fff;
+}
+
+
+
