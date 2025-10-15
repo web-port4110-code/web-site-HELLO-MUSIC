@@ -1,21 +1,9 @@
-* {
+html * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.headerContainer {
-    border: 1px black solid;
-}
-/*
-.headerContainer h1 {
-    border: 1px black solid;
-}
-/*
-.headerContainer ul {
-    border: 1px black solid;
-}
-*/
 html {
     font-size: 14px;
 }
@@ -33,9 +21,23 @@ img {
     vertical-align: bottom;
 }
 
+a {
+    text-decoration-line: none;
+}
+
+@media (min-width: 768px) {
+    .mainContainer {
+        max-width: 916px;
+        margin: 0 auto;
+        padding: 0 10px 0;
+    }
+}
+
 /*ーーーーーーーーーーーーーーーーーーーーーー
 ヘッダー
 --------------------------------------*/
+
+
 
 .attention {
     background-color: hsl(60, 2%, 84%);
@@ -66,6 +68,7 @@ header h1 {
 header {
     position: fixed;
     z-index: 10;
+    width: 100%;
 }
 
 .headerBox {
@@ -148,13 +151,72 @@ header li:first-child {
     border-top: black solid 1px;
 }
 
+header li:nth-child(odd) {
+    background-color: hsl(65, 75%, 78%);
+}
+
+header li:nth-child(even) {
+    background-color: hsl(260, 82%, 91%);
+}
+
+@media (min-width: 768px) {
+
+    .attention {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    header h1 {
+        margin-top: 3px;
+    }
+
+    .headerBox__button {
+        display: none;
+    }
+
+    header ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        width: 500px;
+        position: absolute;
+        top: 54px;
+        right: 0;
+        }
+    
+    header li {
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 0 10px 0;
+        font-size: 22px;
+    }
+    
+    header li:first-child {
+        border-top: none;
+    }
+
+    header li:nth-child(odd) {
+        background-color: transparent;
+    }
+    
+    header li:nth-child(even) {
+        background-color: transparent;
+    }
+}
+
 /*------------------------------------------------
 メインコンテナ
 ------------------------------------------------*/
 
 
 .heroImg {
-    padding-top: 101px;
+    padding-top: 99px;
 }
 
 .heroImg img {
@@ -526,6 +588,9 @@ concertInfoモジュール
     margin-bottom: 7px;
 }
 
+.footerNav a {
+    color: #fff;
+}
 
 
 
