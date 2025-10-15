@@ -254,6 +254,17 @@ introductionモジュール
     
 }
 
+.introduction__para p {
+    margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+
+    .introduction__para p {
+        margin: 0;
+    }
+}
+
 /*--------------------------------------
 concertInfoモジュール
 ---------------------------------------*/
