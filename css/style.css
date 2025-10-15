@@ -429,6 +429,12 @@ concertInfoモジュール
     border-bottom: 1px solid var(--cardFourColor);
 }
 
+@media (min-width: 768px) {
+
+    .list-group {
+        overflow: auto;
+    }
+}
 
 /*----------------------------------------
 スライドショーモジュール
