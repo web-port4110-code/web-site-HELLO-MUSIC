@@ -254,6 +254,17 @@ introductionモジュール
     
 }
 
+.introduction__para p {
+    margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+
+    .introduction__para p {
+        margin: 0;
+    }
+}
+
 /*--------------------------------------
 concertInfoモジュール
 ---------------------------------------*/
@@ -317,48 +328,6 @@ concertInfoモジュール
 .concertInfo__tab li {
     white-space: nowrap;
 }
-
-.concertInfo__tab--one {
-    width: 90%;
-    height: var(--concertTabHeight);
-    visibility: hidden;
-    background-color: hsl(119, 59%, 87%);
-    position: absolute;
-    padding: 10px 20px;
-    overflow: scroll;
-}
-
-.concertInfo__tab--two {
-    width: 90%;
-    height: var(--concertTabHeight);
-    visibility: hidden;
-    background-color: hsl(149, 59%, 87%);
-    position: absolute;
-    padding: 10px 20px;
-    overflow: scroll;
-}
-
-.concertInfo__tab--three {
-    width: 90%;
-    height: var(--concertTabHeight);
-    visibility: hidden;
-    background-color: hsl(179, 59%, 87%);
-    position: absolute;
-    padding: 10px 20px;
-    overflow: scroll;
-}
-
-.concertInfo__tab--four {
-    width: 90%;
-    height: var(--concertTabHeight);
-    visibility: hidden;
-    background-color: hsl(209, 59%, 87%);
-    position: absolute;
-    padding: 10px 20px;
-    overflow: scroll;
-}
-
-
 
 .list-group {
     overflow: scroll;
@@ -434,6 +403,11 @@ concertInfoモジュール
     .list-group {
         overflow: auto;
     }
+
+    .concertInfo {
+        border-left: hsl(65, 75%, 78%) 3px solid ;
+        border-right: hsl(65, 75%, 78%) 3px solid ;
+    }
 }
 
 /*----------------------------------------
@@ -477,6 +451,12 @@ concertInfoモジュール
   right: -25px;
 }
 
+@media (min-width: 768px) {
+    .slideShow {
+        border-left: hsl(65, 75%, 78%) 3px solid ;
+        border-right: hsl(65, 75%, 78%) 3px solid ;
+    }
+}
 
 /*----------------------------------
 ニュースモジュール
