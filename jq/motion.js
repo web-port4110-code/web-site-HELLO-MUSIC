@@ -15,7 +15,7 @@ $(function() {
     $('select').on('change', function(){
         const selectElement = $(this).get(0);
         const selectValue = selectElement.value;
-        const options = $('.concertInfo__tab div').get();
+        const options = $('.card').get();
 
         $('.active').removeClass('active');
         options[selectValue - 1].classList.add('active');
