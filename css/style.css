@@ -1,14 +1,6 @@
 @import "header.css";
+@import "common.css";
 
-html * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 14px;
-}
 
 :root {
     --concertTabHeight: 300px;
@@ -16,23 +8,6 @@ html {
     --cardTwoColor: hsl(149, 59%, 87%);
     --cardThreeColor: hsl(179, 59%, 87%);
     --cardFourColor: hsl(209, 59%, 87%);
-}
-
-img {
-    max-width: 100%;
-    vertical-align: bottom;
-}
-
-a {
-    text-decoration-line: none;
-}
-
-@media (min-width: 768px) {
-    .mainContainer {
-        max-width: 916px;
-        margin: 0 auto;
-        padding: 0 10px 0;
-    }
 }
 
 /*------------------------------------------------
