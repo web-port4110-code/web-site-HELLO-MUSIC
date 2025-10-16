@@ -15,51 +15,20 @@
         <script src="jq/slick/script.js"></script>
         <script src="jq/slick/slick.min.js"></script>
         <script src="jq/motion.js"></script>
+        <script src="jq/header.js"></script>
         <!--font Awesome-->
         <script src="https://kit.fontawesome.com/98bfb8a6c1.js" crossorigin="anonymous"></script>
         <!--webフォント-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header>
-            <div class="headerContainer">
-                <div class="attention">
-                    <p>
-                        このサイトはポートフォリオ用に作成したものです。
-                        サイト内の情報は創作であり、実在しません。
-                    </p>
-                </div>
-                <div class="headerBox">
-                    <h1 class="dancing-script-font">Hello Music</h1>
-                    <div class="headerBox__button">
-                        <div class="headerBox__button--close">
-                            <a href="#" class="c">
-                                <div class="headerBox__iconBox">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="headerBox__button--open">
-                            <a href="#" class="o">
-                                <div class="headerBox__iconBox">
-                                    <i class="fa-solid fa-bars"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <nav>
-                    <ul class="navigation">
-                        <li>HOME</li>
-                        <li>アクセス</li>
-                        <li>お問い合せ</li>
-                        <li>楽器紹介</li>
-                    </ul>
-                </nav>
-            </div>
+            <?php
+            require_once './php_mojure/header.php';
+            ?>
         </header>
 
         <main>
