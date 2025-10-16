@@ -1,2 +1,7 @@
 @import "common.css";
 @import "header.css";
+@import "footer.css";
+
+.headerSpace {
+    height: var(--toppadding);
+}

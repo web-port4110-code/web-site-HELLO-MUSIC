@@ -21,7 +21,10 @@
         </header>
 
         <main>
-            <div class="mainContainer">    
+            <div class="mainContainer">
+                <div class="headerSpace"></div>
+                <h1>チケット予約フォーム</h1>
+                
 
                 <form method="post" action="http://localhost:8888/validation/check.php">
                     <fieldset>
