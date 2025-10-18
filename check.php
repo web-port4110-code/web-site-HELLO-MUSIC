@@ -41,11 +41,16 @@
 
         if (count($errorArray) === 0) {
         ?>
-            <p>
-                正常に入力されていました。<br>
-                なお、入力されたデータは保存されません。
-            </p>
-            <p><a href="index.php">ホームへ戻る</a></p>
+            <div class="mainContainer">
+                <div class="headerSpace"></div>
+                <div class="success">
+                    <p class="success__para">正常に入力されていました。</p>
+                    <p>なお、入力されたデータは保存されません。</p>
+                    <p class="success__backHome">
+                        <a href="index.php">ホームへ戻る</a>
+                    </p>
+                </div>
+            </div>
         <?php
         } else {
         ?>
