@@ -58,3 +58,21 @@ button:hover {
     display: flex;
     justify-content: center;
 }
+
+.errorBox {
+    border: red 1px solid;
+    padding: 15px 0 15px;
+}
+
+.errorBox p {
+    padding-left: 15px;
+}
+
+.errorBox ul {
+    padding-left: 50px;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
+.errorBox li {
+}
