@@ -41,11 +41,11 @@
                             <div class="inputMojure--name__aria">
                                 <div class="mb-3">
                                     <label for="familyname" class="form-label">性</label>
-                                    <input type="text" class="form-control" name="familyname" id="familyname" required>
+                                    <input type="text" class="form-control" name="familyname" id="familyname" placeholder="例)山田" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="firstname" class="form-label">名</label>
-                                    <input type="text" class="form-control" name="firstname" id="firstname" required>
+                                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="例)太郎" required>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                                 <span>2. メールアドレス<span class="requireMark">必須</span></span>
                             </p>
                             <div class="inputMojure--email__aria">
-                                <input type="text" class="form-control" name="email" id="email" placeholder="" required>
+                                <input type="text" class="form-control" name="email" id="email" placeholder="例)abc@gmail.com" required>
                             </div>
                         </div>
                         <div class="inputMojure--concert">

@@ -39,6 +39,10 @@
     margin-top: 5px;
 }
 
+.form-control::placeholder {
+    opacity: .5;
+}
+
 button {
     width: 150px;
     padding: 5px 15px 5px;
