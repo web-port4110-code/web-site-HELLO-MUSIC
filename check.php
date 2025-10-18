@@ -10,6 +10,12 @@
         <script src="jq/header.js"></script>
         <link rel="stylesheet" href="css/form.css">
         <title>フォーム入力結果</title>
+        <!--font Awesome-->
+        <script src="https://kit.fontawesome.com/98bfb8a6c1.js" crossorigin="anonymous"></script>
+        <!--webフォント-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
