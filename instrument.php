@@ -1,5 +1,16 @@
 <!doctype html>
 <html lang="ja">
+    <?php
+        try{
+            require_once './php_mojure/connect_db.php';
+            $db = getdb();
+            $stt = $db->prepare('SELECT * FROM testinst WHERE slug = "ob"');
+            $stt->execute();
+            $row = $stt->fetch(PDO::FETCH_ASSOC);
+        } catch (\Throwable $th) {
+            die("接続エラー：{$th->getMessage()}");
+        }
+    ?>
 
     <head>
         <meta charset="UTF-8">
@@ -10,7 +21,7 @@
         <script src="jq/jquery-3.7.1.min.js"></script>
         <script src="jq/header.js"></script>
         <link rel="stylesheet" href="css/instrument.css">
-        <title>チケット予約フォーム</title>
+        <title><?=$row['title'] ?></title>
         <!--font Awesome-->
         <script src="https://kit.fontawesome.com/98bfb8a6c1.js" crossorigin="anonymous"></script>
         <!--webフォント-->
@@ -30,29 +41,22 @@
             <div class="mainContainer">
                 <div class="headerSpace"></div>
                 <article>
-                    <h1>フルートってどんな楽器？</h1>
+                    <h1><?=$row['title'] ?></h1>
                     <figure class="instImg">
-                        <img src="images/flute.png" alt="フルートの画像">
+                        <img src="<?=$row['img'] ?>" alt="<?=$row['alt'] ?>">
                     </figure>
                     <blockquote>
                         <div class="paragraph">
                             <h2>概要</h2>
-                            <p>
-                                フルートは、木管楽器の一種で、
-                                リードを使わないエアリード（無簧）式の横笛である.
-                            </p>
-                            <p>
-                                現代のフルート（モダン・フルート）は、バス・フルートなどの同属楽器と区別する場合、
-                                グランド・フルートまたはコンサート・フルートとも呼ばれる、
-                            </p>
+                            <?=$row['para'] ?>
                         </div>
                         <div class="workList">
                             <h2>作品例</h2>
-                            <ul>
-                                <li>ヴォルフガング・アマデウス・モーツァルト：フルート四重奏曲</li>
-                                <li>セルゲイ・プロコフィエフ：フルートとピアノのためのソナタ</li>
-                                <li>フランシス・プーランク：フルートとピアノのためのソナタ</li>
-                            </ul>
+                            <div class="workList__flexContainer">
+                                <ul>
+                                    <?=$row['list'] ?>
+                                </ul>
+                            </div>
                         </div>
                     </blockquote>
                 </article>
