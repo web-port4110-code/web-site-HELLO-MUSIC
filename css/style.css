@@ -1,24 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.headerContainer {
-    border: 1px black solid;
-}
-/*
-.headerContainer h1 {
-    border: 1px black solid;
-}
-/*
-.headerContainer ul {
-    border: 1px black solid;
-}
-*/
-html {
-    font-size: 14px;
-}
+@import "header.css";
+@import "common.css";
+@import "footer.css";
 
 :root {
     --concertTabHeight: 300px;
@@ -28,137 +10,13 @@ html {
     --cardFourColor: hsl(209, 59%, 87%);
 }
 
-img {
-    max-width: 100%;
-    vertical-align: bottom;
-}
-
-a {
-    text-decoration-line: none;
-}
-
-/*ーーーーーーーーーーーーーーーーーーーーーー
-ヘッダー
---------------------------------------*/
-
-.attention {
-    background-color: hsl(60, 2%, 84%);
-    border: 1px solid hsl(60, 1%, 26%);
-    height: 45px;
-    
-}
-
-.attention p {
-    margin: 0;
-    padding: 0;
-}
-
-.dancing-script-font {
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
-
-header h1 {
-    font-size: 35px;
-    margin-top: 7px;
-    margin-left: 10px;
-}
-
-header {
-    position: fixed;
-    z-index: 10;
-}
-
-.headerBox {
-    height: 54px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: solid 2px hsl(261, 100%, 50%);
-    background-color: hsl(260, 82%, 91%);
-}
-
-.headerBox__button {
-    position: relative;
-    width: 50px;
-    height: 50px;
-}
-
-.headerBox__button--open,
-.headerBox__button--close {
-    width: 50px;
-    height: 50px;
-    background-color: gray;
-    position: absolute;
-}
-
-.headerBox__button--open a,
-.headerBox__button--close a {
-    display: block;
-    width: 50px;
-    height: 50px;
-    text-decoration-line: none;
-}
-
-.headerBox__button--open a:hover,
-.headerBox__button--close a:hover {
-    opacity: 0.6;
-}
-
-.headerBox__iconBox {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.fa-bars, .fa-xmark {
-    font-size: 45px;
-    color: #fff;
-}
-
-header ul {
-    list-style-type: none;
-    width: 200px;
-    position: absolute;
-    top: 102px;
-    right: -120%;
-
-}
-
-.open {
-    right: 0;
-}
-
-.hide {
-    display: none;
-}
-
-header li {
-    border-bottom: black solid 1px;
-    border-left: black solid 1px;
-    border-right: black solid 1px;
-    padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-header li:first-child {
-    border-top: black solid 1px;
-}
-
 /*------------------------------------------------
 メインコンテナ
 ------------------------------------------------*/
 
 
 .heroImg {
-    padding-top: 101px;
+    padding-top: 99px;
 }
 
 .heroImg img {
@@ -194,6 +52,17 @@ introductionモジュール
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     
+}
+
+.introduction__para p {
+    margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+
+    .introduction__para p {
+        margin: 0;
+    }
 }
 
 /*--------------------------------------
@@ -259,48 +128,6 @@ concertInfoモジュール
 .concertInfo__tab li {
     white-space: nowrap;
 }
-
-.concertInfo__tab--one {
-    width: 90%;
-    height: var(--concertTabHeight);
-    visibility: hidden;
-    background-color: hsl(119, 59%, 87%);
-    position: absolute;
-    padding: 10px 20px;
-    overflow: scroll;
-}
-
-.concertInfo__tab--two {
-    width: 90%;
-    height: var(--concertTabHeight);
-    visibility: hidden;
-    background-color: hsl(149, 59%, 87%);
-    position: absolute;
-    padding: 10px 20px;
-    overflow: scroll;
-}
-
-.concertInfo__tab--three {
-    width: 90%;
-    height: var(--concertTabHeight);
-    visibility: hidden;
-    background-color: hsl(179, 59%, 87%);
-    position: absolute;
-    padding: 10px 20px;
-    overflow: scroll;
-}
-
-.concertInfo__tab--four {
-    width: 90%;
-    height: var(--concertTabHeight);
-    visibility: hidden;
-    background-color: hsl(209, 59%, 87%);
-    position: absolute;
-    padding: 10px 20px;
-    overflow: scroll;
-}
-
-
 
 .list-group {
     overflow: scroll;
@@ -371,6 +198,17 @@ concertInfoモジュール
     border-bottom: 1px solid var(--cardFourColor);
 }
 
+@media (min-width: 768px) {
+
+    .list-group {
+        overflow: auto;
+    }
+
+    .concertInfo {
+        border-left: hsl(65, 75%, 78%) 3px solid ;
+        border-right: hsl(65, 75%, 78%) 3px solid ;
+    }
+}
 
 /*----------------------------------------
 スライドショーモジュール
@@ -413,6 +251,12 @@ concertInfoモジュール
   right: -25px;
 }
 
+@media (min-width: 768px) {
+    .slideShow {
+        border-left: hsl(65, 75%, 78%) 3px solid ;
+        border-right: hsl(65, 75%, 78%) 3px solid ;
+    }
+}
 
 /*----------------------------------
 ニュースモジュール
@@ -445,93 +289,6 @@ concertInfoモジュール
     white-space: nowrap;
     padding-left: 15px;
     font-size: 17px;
-}
-
-/*
-.news__table--day span {
-    border-bottom: 1px solid black;
-    padding-bottom: 3px;
-}
-*/
-/*---------------------------------------
-フッターモジュール
-------------------------------------*/
-
-.footerContainer {
-    background-color: hsl(0, 0%, 16%);
-    padding: 15px 0 20px;
-}
-
-.footerIcon {
-    text-align: center;
-    
-}
-
-.footerIcon h2 {
-    color: #fff;
-    font-size: 16px;
-}
-
-.footerIcon__box {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.footerIcon__box--x,
-.footerIcon__box--insta {
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    border: 1px black solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    margin: 0 15px;
-}
-
-.footerIcon__box i {
-    font-size: 20px;;
-}
-
-.fa-x-twitter {
-    background-color: gray;
-    color: #fff;
-}
-
-.fa-instagram {
-    background-color: orange;
-    border: 1px solid orange;
-    color: #fff;
-}
-
-.footerNav {
-    /*display: flex;
-    justify-content: center;*/
-    color: #fff;
-    margin-top: 15px;
-
-}
-
-.footerNav p {
-    text-align: center;
-}
-
-.footerNav li {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 7px;
-    list-style-type: none;
-    list-style-position: inside;
-}
-
-.footerNav li:last-child {
-    margin-bottom: 7px;
-}
-
-.footerNav a {
-    color: #fff;
 }
 
 

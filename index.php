@@ -15,51 +15,20 @@
         <script src="jq/slick/script.js"></script>
         <script src="jq/slick/slick.min.js"></script>
         <script src="jq/motion.js"></script>
+        <script src="jq/header.js"></script>
         <!--font Awesome-->
         <script src="https://kit.fontawesome.com/98bfb8a6c1.js" crossorigin="anonymous"></script>
         <!--webフォント-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header>
-            <div class="headerContainer">
-                <div class="attention">
-                    <p>
-                        このサイトはポートフォリオ用に作成したものです。
-                        サイト内の情報は創作であり、実在しません。
-                    </p>
-                </div>
-                <div class="headerBox">
-                    <h1 class="dancing-script-font">Hello Music</h1>
-                    <div class="headerBox__button">
-                        <div class="headerBox__button--close">
-                            <a href="#" class="c">
-                                <div class="headerBox__iconBox">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="headerBox__button--open">
-                            <a href="#" class="o">
-                                <div class="headerBox__iconBox">
-                                    <i class="fa-solid fa-bars"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <nav>
-                    <ul class="navigation">
-                        <li>HOME</li>
-                        <li>アクセス</li>
-                        <li>お問い合せ</li>
-                        <li>楽器紹介</li>
-                    </ul>
-                </nav>
-            </div>
+            <?php
+            require_once './php_mojure/header.php';
+            ?>
         </header>
 
         <main>
@@ -155,57 +124,6 @@
                             </div>
 
                         </div>
-
-                        <!--
-                        <div class="concertInfo__tab">
-                            <div class="concertInfo__tab--one active">
-                                <hgroup>
-                                    <h2>第1回 「ヴァイオリンの調べ」</h2>
-                                    <p>8/22 18:30〜</p>
-                                </hgroup>
-                                <ul>
-                                    <li>J.S.バッハ<br>　無伴奏ヴァイオリンのためのパルティータ 第6番</li>
-                                    <li>B.バルトーク<br>　無伴奏ヴァイオリンのためのソナタ</li>
-                                    <li>L.V.ベートーヴェン<br>　ヴァイオリンソナタ 第6番</li>
-                                </ul>
-                            </div>
-                            <div class="concertInfo__tab--two">
-                                <hgroup>
-                                    <h2>第2回 「学生コンサート」</h2>
-                                    <p>8/23 10:30〜</p>
-                                </hgroup>
-                                <ul>
-                                    <li>ショパン<br>　幻想曲第1番</li>
-                                    <li>ショパン<br>　華麗なる大円舞曲</li>
-                                    <li>サン＝サーンス<br>　クラリネット・ソナタ 変ホ長調より 第1楽章</li>
-                                    <li>ベートーヴェン<br>　ホルン・ソナタ ヘ長調</li>
-                                    <li>ブラームス<br>　ヴァイオリン・ソナタ 第1番 ト長調より 第1楽章</li>
-                                </ul>
-                            </div>
-                            <div class="concertInfo__tab--three">
-                                <hgroup>
-                                    <h2>第3回 「モーツァルトの魅力」</h2>
-                                    <p>8/23 14:30〜</p>
-                                </hgroup>
-                                <ul>
-                                    <li>ピアノ・ソナタ 第11番 イ長調 「トルコ行進曲付き」</li>
-                                    <li>クラリネット五重奏曲</li>
-                                    <li>きらきら星変奏曲</li>
-                                    <li>弦楽四重奏曲 第19番 ハ長調 「不協和音」</li>
-                                </ul>
-                            </div>
-                            <div class="concertInfo__tab--four">
-                                <hgroup>
-                                    <h2>第4回 「作曲コンクール 本戦」</h2>
-                                    <p>8/23 18:30〜</p>
-                                </hgroup>
-                                <ul>
-                                    <li>キム・ヨネ<br>　晴天(世界初演)</li>
-                                    <li>ボラリス・アデトワフスキー<br>　ここにあるものはなんだろう(世界初演)</li>
-                                    <li>郡司総一郎<br>　交響的作品(世界初演)</li>
-                                </ul>
-                            </div>
-                        </div>-->
                     </div>
                 </section>
                 <section class="news">
@@ -271,33 +189,9 @@
         </main>
 
         <footer>
-            <div class="footerContainer">
-                <section class="footerIcon">
-                    <h2>Follow Us!</h2>
-                    <div class="footerIcon__box">
-                        <div class="footerIcon__box--x">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </div>
-                        <div class="footerIcon__box--insta">
-                            <i class="fa-brands fa-instagram"></i>
-                        </div>
-                    </div>
-                </section>
-                <section class="footerNav">
-                    <p><a href="#">HOME</a></p>
-                    <p><a href="#">アクセス</a></p>
-                    <p><a href="#">お問い合わせ</a></p>
-                    <p><a href="#">楽器紹介</a></p>
-                    <!--
-                    <ul>
-                        <li><p>HOME</p></li>
-                        <li>アクセス</li>
-                        <li>お問い合わせ</li>
-                        <li>楽器紹介</li>
-                    </ul>
-                        -->
-                </section>
-            </div>
+            <?php
+                require_once './php_mojure/footer.php';
+            ?>
         </footer>
     </body>
 </html>
