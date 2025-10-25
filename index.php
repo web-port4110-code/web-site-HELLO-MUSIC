@@ -184,6 +184,42 @@
                         </li>
 	                </ul>
                 </section>
+
+                <!------------モーダル--------------->
+
+                <div class="container">
+                    <!-- モーダルウィンドウ外枠 -->
+                    <div class="modal" id="instrument" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <!-- モーダルのダイアログ本体 -->
+                        <div class="modal-dialog" role="document">
+                          <!-- モーダルのコンテンツ部分 -->
+                            <div class="modal-content">
+                              <!-- モーダルのヘッダー -->
+                                <div class="modal-header">
+                                    <!-- モーダルのタイトル -->
+                                    <h2 class="modal-title" id="exampleModalLabel">楽器紹介一覧</h2>
+                                    <!-- 閉じるアイコン -->
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                    </button>
+                                </div>
+                                <!-- モーダルの本文 -->
+                                <div class="modal-body">
+                                    <div class="instrument fl">
+                                        <div class="instrument__image">
+                                            <img src="images/flute.png" alt="フルートの画像">
+                                        </div>
+                                        <h3><a>フルートってどんな楽器</a></h3>
+                                    </div>
+                                </div>
+                                <!-- モーダルのフッター -->
+                                <div class="modal-footer">
+                                    <!-- 閉じるボタン -->
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
             </div>
         </main>
