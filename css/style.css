@@ -16,7 +16,8 @@
 
 
 .heroImg {
-    padding-top: 99px;
+    /*padding-top: 99px;*/
+    padding-top: var(--toppadding);
 }
 
 .heroImg img {
