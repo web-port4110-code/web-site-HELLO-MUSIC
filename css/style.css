@@ -305,6 +305,10 @@ concertInfoモジュール
     background-color: hsl(65, 75%, 78%);
 }
 
+.instrument:nth-child(n+2) {
+    margin-top: 20px;
+}
+
 .instrument__image {
     width: 200px;
     aspect-ratio: 3/2;
