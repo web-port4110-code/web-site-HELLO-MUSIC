@@ -1,10 +1,13 @@
 <!doctype html>
 <html lang="ja">
     <?php
+        require_once './php_mojure/escape_value.php';
+        $getParam = escapeValue(trim($_GET['slug']));
         try{
             require_once './php_mojure/connect_db.php';
             $db = getdb();
-            $stt = $db->prepare('SELECT * FROM testinst WHERE slug = "ob"');
+            $stt = $db->prepare('SELECT * FROM testinst WHERE slug = :slug');
+            $stt->bindValue(':slug', $getParam);
             $stt->execute();
             $row = $stt->fetch(PDO::FETCH_ASSOC);
         } catch (\Throwable $th) {
@@ -43,7 +46,9 @@
                 <article>
                     <h1><?=$row['title'] ?></h1>
                     <figure class="instImg">
-                        <img src="<?=$row['img'] ?>" alt="<?=$row['alt'] ?>">
+                        <div class="instImg__box">
+                            <img src="<?=$row['img'] ?>" alt="<?=$row['alt'] ?>">
+                        </div>
                     </figure>
                     <blockquote>
                         <div class="paragraph">

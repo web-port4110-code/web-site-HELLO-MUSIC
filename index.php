@@ -208,7 +208,7 @@
                                         <div class="instrument__image">
                                             <img src="images/flute.png" alt="フルートの画像">
                                         </div>
-                                        <h3><a>フルートってどんな楽器</a></h3>
+                                        <h3><a href="./instrument.php?slug=ob">フルートってどんな楽器</a></h3>
                                     </div>
                                 </div>
                                 <!-- モーダルのフッター -->
