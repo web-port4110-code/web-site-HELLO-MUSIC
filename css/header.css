@@ -138,7 +138,7 @@ header li:nth-child(even) {
     header ul {
         list-style-type: none;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         width: 500px;
         position: absolute;
         top: 54px;
@@ -154,6 +154,10 @@ header li:nth-child(even) {
         padding-bottom: 0;
         margin: 0 10px 0;
         font-size: 22px;
+    }
+
+    header li:last-child {
+        margin-right: 35px;
     }
     
     header li:first-child {
