@@ -12,8 +12,7 @@
     </section>
     <section class="footerNav">
         <p><a href="#">HOME</a></p>
-        <p><a href="#">アクセス</a></p>
-        <p><a href="#">お問い合わせ</a></p>
+        <p><a href="#">チケット予約</a></p>
         <p><a href="#">楽器紹介</a></p>
     </section>
 </div>
