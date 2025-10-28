@@ -10,6 +10,7 @@
         <script src="jq/jquery-3.7.1.min.js"></script>
         <script src="jq/header.js"></script>
         <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/modal.css">
         <title>チケット予約フォーム</title>
         <!--font Awesome-->
         <script src="https://kit.fontawesome.com/98bfb8a6c1.js" crossorigin="anonymous"></script>
@@ -97,6 +98,11 @@
                 <p>どんぶりどうもありがとうございますようこそいらっしゃいました</p>
                 <p>どんぶりこどうもありがとうございますようこそいらっしゃいました</p>
             </div>
+
+            <!--モーダル-->
+            <?php
+                require_once __DIR__.'/php_mojure/modal.php';
+            ?>
         </main>
 
         <footer>
