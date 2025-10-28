@@ -23,7 +23,7 @@
     <body>
         <header>
             <?php
-                require_once './php_mojure/header.php';
+                require_once __DIR__.'/php_mojure/header.php';
             ?>
         </header>
 
@@ -107,7 +107,7 @@
 
         <footer>
             <?php
-                require_once './php_mojure/footer.php';
+                require_once __DIR__.'/php_mojure/footer.php';
             ?>
         </footer>
     </body>

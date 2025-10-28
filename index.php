@@ -28,7 +28,7 @@
     <body>
         <header>
             <?php
-            require_once './php_mojure/header.php';
+            require_once __DIR__.'/php_mojure/header.php';
             ?>
         </header>
 
@@ -133,7 +133,7 @@
                         <table>
                             <?php
                             try{
-                                require_once './php_mojure/connect_db.php';
+                                require_once __DIR__.'/php_mojure/connect_db.php';
                                 $db = getdb();
                                 $stt = $db->prepare('SELECT * FROM samplenews');
                                 $stt->execute();
@@ -197,7 +197,7 @@
 
         <footer>
             <?php
-                require_once './php_mojure/footer.php';
+                require_once __DIR__.'/php_mojure/footer.php';
             ?>
         </footer>
     </body>

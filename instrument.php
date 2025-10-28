@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ja">
     <?php
-        require_once './php_mojure/escape_value.php';
+        require_once __DIR__.'/php_mojure/escape_value.php';
         $getParam = escapeValue(trim($_GET['slug']));
         try{
             require_once './php_mojure/connect_db.php';
@@ -36,7 +36,7 @@
     <body>
         <header>
             <?php
-                require_once './php_mojure/header.php';
+                require_once __DIR__.'/php_mojure/header.php';
             ?>
         </header>
 
@@ -70,7 +70,7 @@
 
         <footer>
             <?php
-                require_once './php_mojure/footer.php';
+                require_once __DIR__.'/php_mojure/footer.php';
             ?>
         </footer>
     </body>
