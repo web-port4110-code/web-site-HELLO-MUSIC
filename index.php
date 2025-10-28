@@ -160,7 +160,7 @@
                     </h1>
 	                <ul class="slide_box">
 	                	<li>
-                            <a href="#">
+                            <a href="https://www.youtube.com/watch?v=ngjEVKxQCWs">
                                 <div class="slide-image">
                                     <img src="https://img.youtube.com/vi/ngjEVKxQCWs/sddefault.jpg">
                                 </div>
@@ -168,7 +168,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.youtube.com/watch?v=2Ec_DnPL578">
                                 <div class="slide-image">
                                     <img src="https://img.youtube.com/vi/2Ec_DnPL578/sddefault.jpg">
                                 </div>
@@ -176,7 +176,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.youtube.com/watch?v=6M8fuKjzvFE">
                                 <div class="slide-image">
                                     <img src="https://img.youtube.com/vi/6M8fuKjzvFE/sddefault.jpg">
                                 </div>
