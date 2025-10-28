@@ -29,7 +29,7 @@
             <li>HOME</li>
             <li>アクセス</li>
             <li>お問い合せ</li>
-            <li>楽器紹介</li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#instrument">楽器紹介</a></li>
         </ul>
     </nav>
 </div>
