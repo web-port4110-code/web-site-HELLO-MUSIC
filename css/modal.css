@@ -29,3 +29,8 @@
     margin-top: 15px;
     color: gray;
 }
+
+.instrument a {
+    display: block;
+    margin: 0 15px;
+}
