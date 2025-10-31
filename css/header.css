@@ -86,7 +86,7 @@ header ul {
     position: absolute;
     top: 102px;
     right: -120%;
-
+    transition: all 0.9s;
 }
 
 .navigation a {
