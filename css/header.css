@@ -158,7 +158,7 @@ header li:nth-child(even) {
         padding-left: 0;
         padding-top: 0;
         padding-bottom: 0;
-        margin: 0 10px 0;
+        margin: 0 5px 0;
         font-size: 22px;
     }
 
@@ -176,5 +176,9 @@ header li:nth-child(even) {
     
     header li:nth-child(even) {
         background-color: transparent;
+    }
+
+    .navigation a {
+        padding: 0 5px 3px;
     }
 }
