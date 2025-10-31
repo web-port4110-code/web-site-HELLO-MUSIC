@@ -87,16 +87,6 @@
                         </div>
                     </form>
                 </section>
-
-                <h1 class="title-name">音楽祭「Hello Sound」</h1>
-                <p class="text-primary">2007.08.22(sat)~23(sun)</p>
-                <p>sansanwasenwa.narinari.1111@gmail.com</p>
-                <p>@gmail.com</p>
-                <p>sansanwasenwa.narinari.1111@com</p>
-                <p>sansanwasenwa.narinari.1111@gmail.</p>
-                <p>sansanwasenwa.narinari.1111gmail.com</p>
-                <p>どんぶりどうもありがとうございますようこそいらっしゃいました</p>
-                <p>どんぶりこどうもありがとうございますようこそいらっしゃいました</p>
             </div>
 
             <!--モーダル-->
