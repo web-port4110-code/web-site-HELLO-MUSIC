@@ -5,8 +5,11 @@
         $getParam = escapeValue(trim($_GET['slug']));
         try{
             require_once './php_mojure/connect_db.php';
+            require_once './php_mojure/table_name.php';
             $db = getdb();
-            $stt = $db->prepare('SELECT * FROM testinst WHERE slug = :slug');
+            $tableName = getTableName('instrument');
+            $sql = "SELECT * FROM {$tableName} WHERE slug = :slug";
+            $stt = $db->prepare($sql);
             $stt->bindValue(':slug', $getParam);
             $stt->execute();
             $row = $stt->fetch(PDO::FETCH_ASSOC);

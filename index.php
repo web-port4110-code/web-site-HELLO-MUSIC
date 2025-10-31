@@ -134,8 +134,11 @@
                             <?php
                             try{
                                 require_once __DIR__.'/php_mojure/connect_db.php';
+                                require_once __DIR__.'/php_mojure/table_name.php';
                                 $db = getdb();
-                                $stt = $db->prepare('SELECT * FROM samplenews');
+                                $tableName = getTableName('news');
+                                $sql = "SELECT * FROM {$tableName}";
+                                $stt = $db->prepare($sql);
                                 $stt->execute();
                                 while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
                             ?>
