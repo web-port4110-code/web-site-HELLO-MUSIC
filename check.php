@@ -20,14 +20,14 @@
     <body>
         <header>
             <?php
-                require_once './php_mojure/header.php';
+                require_once __DIR__.'/php_mojure/header.php';
             ?>
         </header>
         <main>
         <?php
-        require_once './php_mojure/validation.php';
-        require_once './php_mojure/print_checked_attr.php';
-        require_once './php_mojure/escape_value.php';
+        require_once __DIR__.'/php_mojure/validation.php';
+        require_once __DIR__.'/php_mojure/print_checked_attr.php';
+        require_once __DIR__.'/php_mojure/escape_value.php';
         
         $familyname = escapeValue(trim($_POST['familyname']));
         $firstname = escapeValue(trim($_POST['firstname']));
@@ -199,7 +199,7 @@
         <p><a href="form.php">戻る</a></p>
         <footer>
             <?php
-                require_once './php_mojure/footer.php';
+                require_once __DIR__.'/php_mojure/footer.php';
             ?>
         </footer>
     </body>

@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="jq/slick/slick-theme.css">
         <link rel="stylesheet" href="jq/slick/slick.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/modal.css">
         <title></title>
         <script src="bootstrap-5.3.0-dist/js/bootstrap.bundle.js"></script>
         <script src="jq/jquery-3.7.1.min.js"></script>
@@ -27,7 +28,7 @@
     <body>
         <header>
             <?php
-            require_once './php_mojure/header.php';
+            require_once __DIR__.'/php_mojure/header.php';
             ?>
         </header>
 
@@ -132,7 +133,7 @@
                         <table>
                             <?php
                             try{
-                                require_once './php_mojure/connect_db.php';
+                                require_once __DIR__.'/php_mojure/connect_db.php';
                                 $db = getdb();
                                 $stt = $db->prepare('SELECT * FROM samplenews');
                                 $stt->execute();
@@ -159,7 +160,7 @@
                     </h1>
 	                <ul class="slide_box">
 	                	<li>
-                            <a href="#">
+                            <a href="https://www.youtube.com/watch?v=ngjEVKxQCWs">
                                 <div class="slide-image">
                                     <img src="https://img.youtube.com/vi/ngjEVKxQCWs/sddefault.jpg">
                                 </div>
@@ -167,7 +168,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.youtube.com/watch?v=2Ec_DnPL578">
                                 <div class="slide-image">
                                     <img src="https://img.youtube.com/vi/2Ec_DnPL578/sddefault.jpg">
                                 </div>
@@ -175,7 +176,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.youtube.com/watch?v=6M8fuKjzvFE">
                                 <div class="slide-image">
                                     <img src="https://img.youtube.com/vi/6M8fuKjzvFE/sddefault.jpg">
                                 </div>
@@ -187,76 +188,16 @@
 
                 <!------------モーダル--------------->
 
-                <div class="container">
-                    <!-- モーダルウィンドウ外枠 -->
-                    <div class="modal" id="instrument" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <!-- モーダルのダイアログ本体 -->
-                        <div class="modal-dialog" role="document">
-                          <!-- モーダルのコンテンツ部分 -->
-                            <div class="modal-content">
-                              <!-- モーダルのヘッダー -->
-                                <div class="modal-header">
-                                    <!-- モーダルのタイトル -->
-                                    <h2 class="modal-title" id="exampleModalLabel">楽器紹介一覧</h2>
-                                    <!-- 閉じるアイコン -->
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                    </button>
-                                </div>
-                                <!-- モーダルの本文 -->
-                                <div class="modal-body">
-                                    <div class="instrument fl">
-                                        <div class="instrument__image">
-                                            <img src="images/flute.png" alt="フルートの画像">
-                                        </div>
-                                        <h3><a href="./instrument.php?slug=fl">フルートってどんな楽器？</a></h3>
-                                    </div>
-                                    <div class="instrument ob">
-                                        <div class="instrument__image">
-                                            <img src="images/oboe.png" alt="オーボエの画像">
-                                        </div>
-                                        <h3><a href="./instrument.php?slug=ob">オーボエってどんな楽器？</a></h3>
-                                    </div>
-                                    <div class="instrument cl">
-                                        <div class="instrument__image">
-                                            <img src="images/clarinet.png" alt="クラリネットの画像">
-                                        </div>
-                                        <h3><a href="./instrument.php?slug=cl">クラリネットってどんな楽器？</a></h3>
-                                    </div>
-                                    <div class="instrument fg">
-                                        <div class="instrument__image">
-                                            <img src="images/fagot.png" alt="ファゴットの画像">
-                                        </div>
-                                        <h3><a href="./instrument.php?slug=fg">ファゴットってどんな楽器？</a></h3>
-                                    </div>
-                                    <div class="instrument hr">
-                                        <div class="instrument__image">
-                                            <img src="images/horn.png" alt="ホルンの画像">
-                                        </div>
-                                        <h3><a href="./instrument.php?slug=hr">ホルンってどんな楽器？</a></h3>
-                                    </div>
-                                    <div class="instrument vl">
-                                        <div class="instrument__image">
-                                            <img src="images/violin.png" alt="ヴァイオリンの画像">
-                                        </div>
-                                        <h3><a href="./instrument.php?slug=vl">ヴァイオリンってどんな楽器？</a></h3>
-                                    </div>
-                                </div>
-                                <!-- モーダルのフッター -->
-                                <div class="modal-footer">
-                                    <!-- 閉じるボタン -->
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    require_once __DIR__.'/php_mojure/modal.php';
+                ?>
                 
             </div>
         </main>
 
         <footer>
             <?php
-                require_once './php_mojure/footer.php';
+                require_once __DIR__.'/php_mojure/footer.php';
             ?>
         </footer>
     </body>

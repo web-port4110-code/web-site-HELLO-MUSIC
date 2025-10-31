@@ -26,9 +26,8 @@
     </div>
     <nav>
         <ul class="navigation">
-            <li>HOME</li>
-            <li>アクセス</li>
-            <li>お問い合せ</li>
+            <li><a href="./index.php">HOME</a></li>
+            <li><a href="./form.php">チケット予約</a></li>
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#instrument">楽器紹介</a></li>
         </ul>
     </nav>

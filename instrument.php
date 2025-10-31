@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ja">
     <?php
-        require_once './php_mojure/escape_value.php';
+        require_once __DIR__.'/php_mojure/escape_value.php';
         $getParam = escapeValue(trim($_GET['slug']));
         try{
             require_once './php_mojure/connect_db.php';
@@ -24,6 +24,7 @@
         <script src="jq/jquery-3.7.1.min.js"></script>
         <script src="jq/header.js"></script>
         <link rel="stylesheet" href="css/instrument.css">
+        <link rel="stylesheet" href="css/modal.css">
         <title><?=$row['title'] ?></title>
         <!--font Awesome-->
         <script src="https://kit.fontawesome.com/98bfb8a6c1.js" crossorigin="anonymous"></script>
@@ -36,7 +37,7 @@
     <body>
         <header>
             <?php
-                require_once './php_mojure/header.php';
+                require_once __DIR__.'/php_mojure/header.php';
             ?>
         </header>
 
@@ -66,11 +67,16 @@
                     </blockquote>
                 </article>
             </div>
+
+            <!--モーダル-->
+            <?php
+                require_once __DIR__.'/php_mojure/modal.php';
+            ?>
         </main>
 
         <footer>
             <?php
-                require_once './php_mojure/footer.php';
+                require_once __DIR__.'/php_mojure/footer.php';
             ?>
         </footer>
     </body>
