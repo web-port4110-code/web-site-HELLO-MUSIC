@@ -11,9 +11,8 @@
         </div>
     </section>
     <section class="footerNav">
-        <p><a href="#">HOME</a></p>
-        <p><a href="#">アクセス</a></p>
-        <p><a href="#">お問い合わせ</a></p>
-        <p><a href="#">楽器紹介</a></p>
+        <p><a href="./index.php">HOME</a></p>
+        <p><a href="./form.php">チケット予約</a></p>
+        <p><a href="#" data-bs-toggle="modal" data-bs-target="#instrument">楽器紹介</a></p>
     </section>
 </div>

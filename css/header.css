@@ -86,7 +86,11 @@ header ul {
     position: absolute;
     top: 102px;
     right: -120%;
+    transition: all 0.9s;
+}
 
+.navigation a {
+    display: block;
 }
 
 .open {
@@ -118,6 +122,8 @@ header li:nth-child(even) {
     background-color: hsl(260, 82%, 91%);
 }
 
+
+
 @media (min-width: 768px) {
 
     .attention {
@@ -138,7 +144,7 @@ header li:nth-child(even) {
     header ul {
         list-style-type: none;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         width: 500px;
         position: absolute;
         top: 54px;
@@ -152,8 +158,12 @@ header li:nth-child(even) {
         padding-left: 0;
         padding-top: 0;
         padding-bottom: 0;
-        margin: 0 10px 0;
+        margin: 0 5px 0;
         font-size: 22px;
+    }
+
+    header li:last-child {
+        margin-right: 35px;
     }
     
     header li:first-child {
@@ -166,5 +176,9 @@ header li:nth-child(even) {
     
     header li:nth-child(even) {
         background-color: transparent;
+    }
+
+    .navigation a {
+        padding: 0 5px 3px;
     }
 }

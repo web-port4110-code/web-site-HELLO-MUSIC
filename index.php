@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="jq/slick/slick-theme.css">
         <link rel="stylesheet" href="jq/slick/slick.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/modal.css">
         <title></title>
         <script src="bootstrap-5.3.0-dist/js/bootstrap.bundle.js"></script>
         <script src="jq/jquery-3.7.1.min.js"></script>
@@ -27,7 +28,7 @@
     <body>
         <header>
             <?php
-            require_once './php_mojure/header.php';
+            require_once __DIR__.'/php_mojure/header.php';
             ?>
         </header>
 
@@ -132,9 +133,12 @@
                         <table>
                             <?php
                             try{
-                                require_once './php_mojure/connect_db.php';
+                                require_once __DIR__.'/php_mojure/connect_db.php';
+                                require_once __DIR__.'/php_mojure/table_name.php';
                                 $db = getdb();
-                                $stt = $db->prepare('SELECT * FROM samplenews');
+                                $tableName = getTableName('news');
+                                $sql = "SELECT * FROM {$tableName}";
+                                $stt = $db->prepare($sql);
                                 $stt->execute();
                                 while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
                             ?>
@@ -159,7 +163,7 @@
                     </h1>
 	                <ul class="slide_box">
 	                	<li>
-                            <a href="#">
+                            <a href="https://www.youtube.com/watch?v=ngjEVKxQCWs">
                                 <div class="slide-image">
                                     <img src="https://img.youtube.com/vi/ngjEVKxQCWs/sddefault.jpg">
                                 </div>
@@ -167,7 +171,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.youtube.com/watch?v=2Ec_DnPL578">
                                 <div class="slide-image">
                                     <img src="https://img.youtube.com/vi/2Ec_DnPL578/sddefault.jpg">
                                 </div>
@@ -175,7 +179,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.youtube.com/watch?v=6M8fuKjzvFE">
                                 <div class="slide-image">
                                     <img src="https://img.youtube.com/vi/6M8fuKjzvFE/sddefault.jpg">
                                 </div>
@@ -184,13 +188,19 @@
                         </li>
 	                </ul>
                 </section>
+
+                <!------------モーダル--------------->
+
+                <?php
+                    require_once __DIR__.'/php_mojure/modal.php';
+                ?>
                 
             </div>
         </main>
 
         <footer>
             <?php
-                require_once './php_mojure/footer.php';
+                require_once __DIR__.'/php_mojure/footer.php';
             ?>
         </footer>
     </body>

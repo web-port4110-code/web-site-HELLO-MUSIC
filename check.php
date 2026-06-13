@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>バリデーション</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/bootstrap.css">
+        <script src="bootstrap-5.3.0-dist/js/bootstrap.bundle.js"></script>
+        <script src="jq/jquery-3.7.1.min.js"></script>
+        <script src="jq/header.js"></script>
+        <link rel="stylesheet" href="css/form.css">
+        <title>フォーム入力結果</title>
+        <!--font Awesome-->
+        <script src="https://kit.fontawesome.com/98bfb8a6c1.js" crossorigin="anonymous"></script>
+        <!--webフォント-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <header>
+            <?php
+                require_once __DIR__.'/php_mojure/header.php';
+            ?>
+        </header>
+        <main>
         <?php
-        require_once './php_mojure/validation.php';
-        require_once './php_mojure/print_checked_attr.php';
-        require_once './php_mojure/escape_value.php';
+        require_once __DIR__.'/php_mojure/validation.php';
+        require_once __DIR__.'/php_mojure/print_checked_attr.php';
+        require_once __DIR__.'/php_mojure/escape_value.php';
         
         $familyname = escapeValue(trim($_POST['familyname']));
         $firstname = escapeValue(trim($_POST['firstname']));
@@ -28,63 +47,150 @@
 
         if (count($errorArray) === 0) {
         ?>
-            <p>正常に入力されていました。</p>
+            <div class="mainContainer">
+                <div class="headerSpace"></div>
+                <div class="success">
+                    <p class="success__para">正常に入力されていました。</p>
+                    <p>なお、入力されたデータは保存されません。</p>
+                    <p class="success__backHome">
+                        <a href="index.php">ホームへ戻る</a>
+                    </p>
+                </div>
+            </div>
         <?php
         } else {
         ?>
-            <ul>
-            <?php
-            foreach ($errorArray as $error) {
-            ?>
-                <li><?=$error ?></li>
-            <?php
-            }
-            ?>
-            </ul>
-            <form method="post" action="http://localhost:8888/validation/check.php">
-                <fieldset>
-                    <legend>
-                        <span>お名前<span>必須</span></span>
-                    </legend>
-                    <div class="name-inputAria">
-                        <div>
-                            <label for="familyname" class="name-sublabel">性</label>
-                            <input type="text" name="familyname" id="familyname" value="<?=$familyname ?>" required>
-                        </div>
-                        <div>
-                            <label for="firstname" class="name-sublabel">名</label>
-                            <input type="text" name="firstname" id="firstname" value="<?=$firstname ?>" required>
-                        </div>
+            <div class="mainContainer">
+                <div class="headerSpace"></div>
+                <div class="formTitle">
+                    <h1>チケット予約フォーム</h1>
+                </div>
+                <section class="inputMojure">
+                    <div class="errorBox">
+                        <p>入力されたデータにエラーがありました！</p>
+                        <ul>
+                            <?php
+                            foreach ($errorArray as $error) {
+                            ?>
+                                <li><?=$error ?></li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
                     </div>
-                </fieldset>
-                <div class="email-input-mojure">
-                    <label for="email">メールアドレス<span>必須</span></label>
-                    <input type="text" name="email" id="email" placeholder="" value="<?=$email ?>" required>
-                </div>
-                <div class="concert-input-mojure mask-element">
-                    <fieldset>
-                        <legend>
-                            <span>予約する演奏会<span>必須</span></span>
-                        </legend>
-                        <div class="select-input-aria">
-                            <label><input type="checkbox" name="concert[]" value="第1回" <?php printCheckedAttr($concert, '第1回'); ?>>「ヴァイオリンの調べ」</label>
-                            <label><input type="checkbox" name="concert[]" value="第2回" <?php printCheckedAttr($concert, '第2回'); ?>>「学生コンサート」</label>
-                            <label><input type="checkbox" name="concert[]" value="第3回" <?php printCheckedAttr($concert, '第3回'); ?>>「モーツァルトの魅力」</label>
-                            <label><input type="checkbox" name="concert[]" value="第4回" <?php printCheckedAttr($concert, '第4回'); ?>>「作曲コンクール 本戦」</label>
+                    <form method="post" action="http://localhost:8888/web-site-HELLO-MUSIC/check.php">
+                        <div class="inputMojure--name">
+                            <p>
+                                <span>1. お名前<span class="requireMark">必須</span></span>
+                            </p>
+                            <div class="inputMojure--name__aria">
+                                <div class="mb-3">
+                                    <label for="familyname" class="form-label">性</label>
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        name="familyname" 
+                                        id="familyname" 
+                                        value="<?=$familyname ?>" 
+                                        required
+                                    >
+                                </div>
+                                <div class="mb-3">
+                                    <label for="firstname" class="form-label">名</label>
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        name="firstname" 
+                                        id="firstname" 
+                                        value="<?=$firstname ?>" 
+                                        required
+                                    >
+                                </div>
+                            </div>
                         </div>
-                    </fieldset>
-                </div>
-                
-                <button>送信</button>
-            </form>
+                        <div class="inputMojure--email mb-3">
+                            <p>
+                                <span>2. メールアドレス<span class="requireMark">必須</span></span>
+                            </p>
+                            <div class="inputMojure--email__aria">
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    name="email" 
+                                    id="email" 
+                                    placeholder="" 
+                                    value="<?=$email ?>" 
+                                    required
+                                >
+                            </div>
+                        </div>
+                        <div class="inputMojure--concert">
+                            
+                            <p>
+                                <span>3. 予約する演奏会<span class="requireMark">必須</span></span>
+                            </p>
+                            <div class="inputMojure--concert__aria">
+                                <div class="form-check">
+                                    <label class="form-check-label" for="concert1">「ヴァイオリンの調べ」</label>
+                                    <input 
+                                        type="checkbox" 
+                                        id="concert1" 
+                                        name="concert[]" 
+                                        value="第7回" 
+                                        class="form-check-input"
+                                        <?php printCheckedAttr($concert, '第1回'); ?>
+                                    >
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="concert2">「学生コンサート」</label>
+                                    <input 
+                                        type="checkbox" 
+                                        id="concert2" 
+                                        name="concert[]" 
+                                        value="第2回" 
+                                        class="form-check-input" 
+                                        <?php printCheckedAttr($concert, '第2回'); ?>
+                                    >
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="concert3">「モーツァルトの魅力」</label>
+                                    <input 
+                                        type="checkbox" 
+                                        id="concert3" 
+                                        name="concert[]" 
+                                        value="第6回" 
+                                        class="form-check-input" 
+                                        <?php printCheckedAttr($concert, '第3回'); ?>
+                                    >
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="concert4">「作曲コンクール 本戦」</label>
+                                    <input 
+                                        type="checkbox" 
+                                        id="concert4" 
+                                        name="concert[]" 
+                                        value="第4回" 
+                                        class="form-check-input" 
+                                        <?php printCheckedAttr($concert, '第4回'); ?>
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inputMojure--button">
+                            <button>送信する</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
         <?php
         }
-
-
-        
-        
-        
         ?>
-        <p><a href="phpform.php">戻る</a></p>
+        </main>
+        <p><a href="form.php">戻る</a></p>
+        <footer>
+            <?php
+                require_once __DIR__.'/php_mojure/footer.php';
+            ?>
+        </footer>
     </body>
 </html>

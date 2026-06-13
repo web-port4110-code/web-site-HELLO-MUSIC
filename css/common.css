@@ -17,6 +17,10 @@ a {
     text-decoration-line: none;
 }
 
+:root {
+    --toppadding: 99px;
+}
+
 @media (min-width: 768px) {
     .mainContainer {
         max-width: 916px;
